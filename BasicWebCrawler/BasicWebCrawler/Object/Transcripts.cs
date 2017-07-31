@@ -6,17 +6,13 @@ using System.Threading.Tasks;
 
 namespace BasicWebCrawler.Object
 {
-    class Earnings
+    class Transcripts
     {
         public string Symbol { get; set; }
         public string Company { get; set; }
         public string MarketCap { get; set; }
-        public string Estimate { get; set; }
-        public string Reported { get; set; }
-        public string Surprise { get; set; }
-        public string Surp { get; set; }
-        public string PriceChange { get; set; }
-        public string Report { get; set; }
-
+        public string Event { get; set; }
+        public string Transcript { get; set; }
+        
     }
 }
