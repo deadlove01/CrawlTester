@@ -51,7 +51,14 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="HostData.cs" />
+    <Compile Include="Object\Dividends.cs" />
     <Compile Include="Object\Earnings.cs" />
+    <Compile Include="Object\Guidance.cs" />
+    <Compile Include="Object\Revisions.cs" />
+    <Compile Include="Object\Sales.cs" />
+    <Compile Include="Object\Splits.cs" />
+    <Compile Include="Object\Transcripts.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
