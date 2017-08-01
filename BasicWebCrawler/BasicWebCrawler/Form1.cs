@@ -23,11 +23,15 @@ namespace BasicWebCrawler
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            HostData data = new HostData();
-            string json = data.getJsonString(@"https://www.zacks.com/includes/classes/z2_class_calendarfunctions_data.php?calltype=eventscal&type=8");
-            //Console.WriteLine(json);
             
-            data.parseJson(8);
         }
+
+        private void btnGetData_Click(object sender, EventArgs e)
+        {
+            HostData data = new HostData();
+            data.GetData();
+
+        }
+
     }
 }
