@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BasicWebCrawler.Object;
 
 using BasicWebCrawler.Object;
 
@@ -24,7 +25,9 @@ namespace BasicWebCrawler
         {
             HostData data = new HostData();
             string json = data.getJsonString(@"https://www.zacks.com/includes/classes/z2_class_calendarfunctions_data.php?calltype=eventscal&type=8");
-            Console.WriteLine(json);
+            //Console.WriteLine(json);
+            
+            data.parseJson(8);
         }
     }
 }

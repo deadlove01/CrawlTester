@@ -11,6 +11,7 @@ namespace BasicWebCrawler.Object
         public string Symbol { get; set; }
         public string Company { get; set; }
         public string MarketCap { get; set; }
+        public string Time { get; set; }
         public string Estimate { get; set; }
         public string Reported { get; set; }
         public string Surprise { get; set; }
