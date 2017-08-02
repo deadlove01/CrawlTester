@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.btnGetData = new System.Windows.Forms.Button();
+            this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // btnGetData
@@ -40,6 +41,12 @@
             this.btnGetData.Text = "Get Update";
             this.btnGetData.UseVisualStyleBackColor = true;
             this.btnGetData.Click += new System.EventHandler(this.btnGetData_Click);
+            // 
+            // backgroundWorker
+            // 
+            this.backgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker_DoWork);
+            this.backgroundWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker_ProgressChanged);
+            this.backgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker_RunWorkerCompleted);
             // 
             // Form1
             // 
@@ -56,6 +63,7 @@
 
         #endregion
         private System.Windows.Forms.Button btnGetData;
+        private System.ComponentModel.BackgroundWorker backgroundWorker;
     }
 }
 

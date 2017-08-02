@@ -20,7 +20,7 @@ namespace BasicWebCrawler
         {
             InitializeComponent();
         }
-
+        HostData data = new HostData();
         private void Form1_Load(object sender, EventArgs e)
         {
             
@@ -28,10 +28,31 @@ namespace BasicWebCrawler
 
         private void btnGetData_Click(object sender, EventArgs e)
         {
-            HostData data = new HostData();
-            data.GetData();
+
+            //data.GetData();
+            btnGetData.Enabled = false;
+            backgroundWorker.RunWorkerAsync("RunLoadData");
+        }
+
+        private void backgroundWorker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            if (e.Argument.ToString().Equals("RunLoadData"))
+            {
+                
+                data.GetData();
+                
+            }
+        }
+
+        private void backgroundWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
 
         }
 
+        private void backgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            btnGetData.Enabled = true;
+            MessageBox.Show("updated");
+        }
     }
 }
