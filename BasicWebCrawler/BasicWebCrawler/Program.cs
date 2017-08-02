@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Quartz;
+using System.Threading;
+using Quartz.Impl;
 
 namespace BasicWebCrawler
 {

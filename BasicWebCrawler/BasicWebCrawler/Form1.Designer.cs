@@ -29,13 +29,10 @@
         private void InitializeComponent()
         {
             this.btnGetData = new System.Windows.Forms.Button();
-<<<<<<< HEAD
             this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
-=======
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_Respond = new System.Windows.Forms.TextBox();
->>>>>>> 4993ab68b78cae98f3deeee243272b419abe4d53
             this.SuspendLayout();
             // 
             // btnGetData
@@ -48,13 +45,11 @@
             this.btnGetData.UseVisualStyleBackColor = true;
             this.btnGetData.Click += new System.EventHandler(this.btnGetData_Click);
             // 
-<<<<<<< HEAD
             // backgroundWorker
             // 
             this.backgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker_DoWork);
             this.backgroundWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker_ProgressChanged);
             this.backgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker_RunWorkerCompleted);
-=======
             // label2
             // 
             this.label2.AutoSize = true;
@@ -80,7 +75,6 @@
             this.txt_Respond.Name = "txt_Respond";
             this.txt_Respond.Size = new System.Drawing.Size(350, 20);
             this.txt_Respond.TabIndex = 6;
->>>>>>> 4993ab68b78cae98f3deeee243272b419abe4d53
             // 
             // Form1
             // 
@@ -103,13 +97,10 @@
 
         #endregion
         private System.Windows.Forms.Button btnGetData;
-<<<<<<< HEAD
         private System.ComponentModel.BackgroundWorker backgroundWorker;
-=======
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_Respond;
->>>>>>> 4993ab68b78cae98f3deeee243272b419abe4d53
     }
 }
 

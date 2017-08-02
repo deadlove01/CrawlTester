@@ -9,6 +9,7 @@ using System.Web.Script.Serialization;
 using BasicWebCrawler.Object;
 using EXcel = Microsoft.Office.Interop.Excel;
 using OfficeOpenXml;
+using System.IO;
 
 namespace BasicWebCrawler
 {
@@ -29,7 +30,6 @@ namespace BasicWebCrawler
             return json.ToString();
         }
 
-        // dsd
         private dynamic parseJson(int typeIndex) {
 
             string json = getJsonString(@"https://www.zacks.com/includes/classes/z2_class_calendarfunctions_data.php?calltype=eventscal&type="+typeIndex);
@@ -673,16 +673,15 @@ namespace BasicWebCrawler
 
         //====================================================
         // write logfile
-        private void writeLog(string objects, string status)
+        public void writeLog(string objects, string status)
         {
             string dic = @"D:\ZACKS\log";
 
-            if (!System.IO.Directory.Exists(dic))
+            if (!Directory.Exists(dic))
             {
-
-                System.IO.Directory.CreateDirectory(dic);
+                Directory.CreateDirectory(dic);
             }
-            System.IO.StreamWriter file = new System.IO.StreamWriter(dic+@"\logs.txt",true);
+            StreamWriter file = new StreamWriter(dic+@"\logs.txt",true);
 
             file.WriteLine(getShortDateString(false)+": "+objects+" => "+status);
             file.Close();
