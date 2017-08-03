@@ -40,7 +40,7 @@ namespace BasicWebCrawler
         }
 
         //Write Logs files on Debug folder
-        static void WriteLogs(string _text)
+        void WriteLogs(string _text)
         {
             StreamWriter _sw = new StreamWriter(Application.StartupPath + @"\logs_test.txt", true);
 
